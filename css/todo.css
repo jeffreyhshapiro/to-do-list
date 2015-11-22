@@ -1,0 +1,59 @@
+body {
+  background-color: #F5F5DC;
+  height: 1000px;
+}
+
+#beige-bg-color {
+  background-color: white;
+  height: 500px;
+  border-radius: 20px;
+  position: fixed;
+  right: 30px;
+}
+
+#positioning {
+  padding-top: 20px;
+  text-align: center;
+}
+
+input {
+  text-align: center;
+  word-wrap: break-word;
+  border-radius: 20px;
+  border: gray-light 1px solid;
+}
+
+
+.dropdown-menu {
+  width: 210px;
+}
+
+#very-important {
+  list-style-type: disc;
+  list-style-position: inside;
+  color: red;
+}
+
+#somewhat-important {
+  list-style-type: disc;
+  list-style-position: inside;
+  color: #FFA500;
+}
+
+#can-wait {
+  list-style-type: disc;
+  list-style-position: inside;
+  color: blue;
+}
+
+#col-width {
+  col width: 20px;
+}
+
+.form-control {
+  width: 20%;
+}
+
+#center-btn {
+  text-align: center;
+}
