@@ -10,7 +10,7 @@ $(document).ready(function() {
     var newRow = $("<tr>");
     var deleteBtn = $("<button>").addClass("btn btn-danger").append("X");
     $("#to-do-list").append(newRow);
-      newRow.append("<td>X</td>")
+      newRow.append("<td>X</td>");
       newRow.append('<td>'+taskToDo+'</td>');
       newRow.append('<td>'+deleteBtn+'</td>');
       
