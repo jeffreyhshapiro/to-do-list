@@ -40,3 +40,11 @@ span {
   font-size: 1.5em;
   text-align: center;
 }
+
+#input-header {
+  padding-left: 10px;
+}
+
+#thumbUp {
+  font-size: 0.5em;
+}
