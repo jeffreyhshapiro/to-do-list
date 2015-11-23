@@ -24,28 +24,6 @@ input {
 }
 
 
-.dropdown-menu {
-  width: 210px;
-}
-
-#very-important {
-  list-style-type: disc;
-  list-style-position: inside;
-  color: red;
-}
-
-#somewhat-important {
-  list-style-type: disc;
-  list-style-position: inside;
-  color: #FFA500;
-}
-
-#can-wait {
-  list-style-type: disc;
-  list-style-position: inside;
-  color: blue;
-}
-
 #col-width {
   col width: 20px;
 }
@@ -55,5 +33,10 @@ input {
 }
 
 #center-btn {
+  text-align: center;
+}
+
+span {
+  font-size: 1.5em;
   text-align: center;
 }
