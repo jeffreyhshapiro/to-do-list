@@ -1,12 +1,11 @@
 $(document).ready(function() {
-  //Add the importance level to the first column of the to do table
   $("#submit-button").on("click", function addTask() {
     var taskToDo = $("#comment").val();
     var newRow = $("<tr>");
     var newTd = $("<td>");
-    var checkBox = $("<div>").addClass("checkbox");
+    //var checkBox = $("input").addClass("checkbox").attr("type", "checkbox");
     var deleteBtn = $("<button>").addClass("btn btn-danger").append("X");
-    var recordGlyph = $("<span>").addClass("glyphicon glyphicon-record");
+    var recordGlyph = $("<span>").attr("id","record").addClass("glyphicon glyphicon-record");
     var thumbsUp = $("<span>").addClass("glyphicon glyphicon-thumbs-up").attr("type","button");
     var buttonComplete = $("<button>").addClass("btn btn-success").append(thumbsUp).css("font-size","0.78em");
     var thumbsDown = $("<span>").addClass("glyphicon glyphicon-thumbs-down");
@@ -22,21 +21,19 @@ $(document).ready(function() {
         $(recordGlyph).css("color", "#5bc0de");
         newRow.append('<td>').find('td').last().append(recordGlyph);
       } else if(!$("#importance-rank").is(':checked')){
-        alert("Please indicate how important this task is!");
         newRow.append('<td>').find('td').last().append(thumbsDown);
       };
   
     //Append the task to the table
     $("#to-do-list").append(newRow);
-      newRow.append('<td>'+taskToDo+'</td>');
+      newRow.append('<td><span class="task">'+taskToDo+'</span></td>');
 
-    //Append a completed to the to do list
+    //Append a complete button to the to do list 
     $("#to-do-list").append(newRow);
       newRow.append('<td>').find('td').last().append(buttonComplete);
       $(buttonComplete).on("click", function(){
-        alert("The complete button was clicked.");
-        $(this).prev("td").css("text-decoration", "line-through");
-      })
+      $(".task").wrap("<strike>");
+      });
 
     //Append deletebtn to table and make it delete
     newRow.append('<td>').find('td').last().append(deleteBtn);
